@@ -8,9 +8,22 @@ namespace Ex38_Events
 {
     public class Metronome
     {
+        private string name = "Bob";
         public delegate void dele(Metronome m, EventArgs e);
         public EventArgs e = null;
         public event dele Tick;
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
 
         public void Loop()
         {

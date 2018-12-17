@@ -19,7 +19,7 @@ namespace Ex38_Events
 
         public void LifeSub(Metronome m)
         {
-            m.Tick += new Metronome.dele(IAmAlive);
+            m.Tick += new Metronome.dele(PersonIsAlive);
             m.Tick += new Metronome.dele(BIIIP);
         }
         public void IAmAlive(Metronome m , EventArgs e)
@@ -29,6 +29,10 @@ namespace Ex38_Events
         public void BIIIP(Metronome m, EventArgs e)
         {
             Console.WriteLine("BIIIIP");
+        }
+        public void PersonIsAlive(Metronome m, EventArgs e)
+        {
+            Console.WriteLine("For the record: " + m.Name + " is alive!");
         }
     }
 }

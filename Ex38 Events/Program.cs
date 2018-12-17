@@ -14,6 +14,7 @@ namespace Ex38_Events
             TickListener l = new TickListener();
             //l.Sub(m);
             //m.Loop();
+            m.Name = "James";
             l.LifeSub(m);
             m.LifeLoop();
         }
