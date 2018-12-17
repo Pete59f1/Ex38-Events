@@ -15,9 +15,15 @@ namespace Ex38_Events
             TickListener l = new TickListener();
             //l.Sub(m);
             //m.Loop();
-            m.Name = "James";
-            m2.Name = "Peter";
-            l.LifeSub(m, m2);
+            Console.WriteLine("Write a name:");
+            m.Name = Console.ReadLine();
+            Console.WriteLine("\n");
+            Console.WriteLine("A second name:");
+            m2.Name = Console.ReadLine();
+            Console.WriteLine("\n");
+
+            l.LifeSub(m);
+            l.LifeSub(m2);
             m.LifeLoop();
             m2.LifeLoop();
         }

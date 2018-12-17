@@ -17,12 +17,10 @@ namespace Ex38_Events
             Console.WriteLine("Heard You");
         }
 
-        public void LifeSub(Metronome m, Metronome m2)
+        public void LifeSub(Metronome m)
         {
             m.Tick += new Metronome.dele(PersonIsAlive);
             m.Tick += new Metronome.dele(BIIIP);
-            m2.Tick += new Metronome.dele(PersonIsAlive);
-            m2.Tick += new Metronome.dele(BIIIP);
         }
         public void IAmAlive(Metronome m , EventArgs e)
         {
